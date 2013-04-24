@@ -33,7 +33,9 @@
 		</beans:property>
 		<beans:property name="defaultViews">
 			<beans:list>
-				<beans:bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+				<beans:bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+					<beans:property name="contentType" value="application/json;charset=UTF-8"/>
+				</beans:bean>
 			</beans:list>
 		</beans:property>
 	</beans:bean>
