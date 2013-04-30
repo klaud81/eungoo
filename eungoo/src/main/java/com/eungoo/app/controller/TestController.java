@@ -1,4 +1,4 @@
-package com.eungoo.app;
+package com.eungoo.app.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,13 +29,7 @@ public class TestController {
 		logger.info("현재시간 : " + new java.text.SimpleDateFormat("HHmmss").format(new java.util.Date()));
 
 		if (selectInfo.getSelectFileName() != null) {
-			System.out.println(selectInfo.getSelectFileName());
-
-			String paramString = selectInfo.getSelectFileName();
-			List<String> returnList = Arrays.asList(paramString.split(","));
-
-			System.out.println(returnList);
-
+			List<String> returnList = Arrays.asList(selectInfo.getSelectFileName().split(","));
 			model.addAttribute("returnList", returnList);
 		}
 	}
