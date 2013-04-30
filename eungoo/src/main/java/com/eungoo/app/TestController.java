@@ -1,15 +1,16 @@
 package com.eungoo.app;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.eungoo.app.domain.SelectInfo;
 
 @Controller
 public class TestController {
@@ -23,13 +24,19 @@ public class TestController {
 	}
 
 	@RequestMapping(value = "/testJson")
-	public void testJson(Model model) {
-		logger.info("JSON 테스트");
-		List<Map<String, String>> returnList = new ArrayList<Map<String, String>>();
-		Map<String, String> returnMap = new HashMap<String, String>();
-		returnMap.put("name", "정은구");
-		returnMap.put("nick", "SilverNine");
-		returnList.add(returnMap);
-		model.addAttribute("returnList", returnList);
+	public void testJson(Model model, @ModelAttribute SelectInfo selectInfo) {
+		logger.info("현재날짜 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
+		logger.info("현재시간 : " + new java.text.SimpleDateFormat("HHmmss").format(new java.util.Date()));
+
+		if (selectInfo.getSelectFileName() != null) {
+			System.out.println(selectInfo.getSelectFileName());
+
+			String paramString = selectInfo.getSelectFileName();
+			List<String> returnList = Arrays.asList(paramString.split(","));
+
+			System.out.println(returnList);
+
+			model.addAttribute("returnList", returnList);
+		}
 	}
 }
