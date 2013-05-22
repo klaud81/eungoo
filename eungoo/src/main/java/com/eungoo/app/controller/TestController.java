@@ -25,7 +25,6 @@ public class TestController {
 
 	@RequestMapping(value = "/testJson")
 	public void testJson(Model model, @ModelAttribute SelectInfo selectInfo) {
-		// TEST
 		logger.info("현재날짜 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
 		logger.info("현재시간 : " + new java.text.SimpleDateFormat("HHmmss").format(new java.util.Date()));
 
