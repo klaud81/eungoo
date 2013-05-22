@@ -14,7 +14,8 @@ import com.eungoo.app.domain.SelectInfo;
 
 @Controller
 public class TestController {
-	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
+	private static final Logger logger = LoggerFactory
+			.getLogger(TestController.class);
 
 	@RequestMapping(value = "/test")
 	public String test(Model model) {
@@ -25,11 +26,17 @@ public class TestController {
 
 	@RequestMapping(value = "/testJson")
 	public void testJson(Model model, @ModelAttribute SelectInfo selectInfo) {
-		logger.info("현재날짜 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
-		logger.info("현재시간 : " + new java.text.SimpleDateFormat("HHmmss").format(new java.util.Date()));
+		// TEST
+		logger.info("현재날짜 : "
+				+ new java.text.SimpleDateFormat("yyyyMMdd")
+						.format(new java.util.Date()));
+		logger.info("현재시간 : "
+				+ new java.text.SimpleDateFormat("HHmmss")
+						.format(new java.util.Date()));
 
 		if (selectInfo.getSelectFileName() != null) {
-			List<String> returnList = Arrays.asList(selectInfo.getSelectFileName().split(","));
+			List<String> returnList = Arrays.asList(selectInfo
+					.getSelectFileName().split(","));
 			model.addAttribute("returnList", returnList);
 		}
 	}
