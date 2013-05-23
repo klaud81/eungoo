@@ -22,7 +22,9 @@
 
 	<tx:annotation-driven />
 	
-	<jdbc:embedded-database id="dataSource" type="HSQL" />
+	<jdbc:embedded-database id="dataSource" type="HSQL">
+		<jdbc:script location="classpath:BABBLE_TRANS.sql"/>
+	</jdbc:embedded-database>
 
 	<!-- Hibernate --> 	
 	<bean id="transactionManager"
