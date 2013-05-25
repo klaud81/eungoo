@@ -1,5 +1,17 @@
 package com.eungoo.app.service;
 
-public class TestService {
+import java.util.List;
 
+import com.eungoo.app.domain.BabbleTrans;
+
+public interface TestService {
+	void add(BabbleTrans babbleTrans);
+
+	void update(BabbleTrans babbleTrans);
+
+	BabbleTrans get(int seq);
+
+	List<BabbleTrans> list();
+
+	void delete(int seq);
 }

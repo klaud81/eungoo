@@ -1,8 +1,11 @@
 package com.eungoo.app.domain;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "BABBLE_TRANS")
 public class BabbleTrans {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "seq")
 	private int seq;
 
@@ -18,7 +21,15 @@ public class BabbleTrans {
 	private String text;
 
 	@Column(name = "reg_date")
-	private String regDate;
+	private Date regDate;
+
+	public Date getRegDate() {
+		return regDate == null ? null : (Date)regDate.clone();
+	}
+
+	public void setRegDate(Date regDate) {
+		this.regDate = (regDate == null) ? null : (Date)regDate.clone();
+	}
 
 	public int getSeq() {
 		return seq;
@@ -35,13 +46,4 @@ public class BabbleTrans {
 	public void setText(String text) {
 		this.text = text;
 	}
-
-	public String getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(String regDate) {
-		this.regDate = regDate;
-	}
-
 }
