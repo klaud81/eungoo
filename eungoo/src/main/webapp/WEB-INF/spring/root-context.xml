@@ -22,10 +22,11 @@
 
 	<tx:annotation-driven />
 	
-	<!-- <jdbc:embedded-database id="dataSource" type="HSQL">
+	<jdbc:embedded-database id="dataSource" type="HSQL">
 		<jdbc:script location="classpath:BABBLE_TRANS.sql"/>
-	</jdbc:embedded-database> -->
+	</jdbc:embedded-database> 
 	
+	<!-- 
 	<bean id="dataSource"
          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	    <property name="driverClassName" value="${database.driverClass}" />
@@ -33,6 +34,7 @@
 	    <property name="username" value="${database.username}" />
 	    <property name="password" value="${database.password}" />
 	</bean>
+	-->
 
 	<!-- Hibernate --> 	
 	<bean id="transactionManager"
