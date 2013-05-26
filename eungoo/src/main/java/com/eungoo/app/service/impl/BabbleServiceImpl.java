@@ -1,5 +1,6 @@
 package com.eungoo.app.service.impl;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,4 +43,10 @@ public class BabbleServiceImpl implements BabbleService {
 		babbleRepository.delete(seq);
 	}
 
+	@Override
+	public BabbleTrans getTrans() {
+		List<BabbleTrans> returnList = babbleRepository.list();
+		Collections.shuffle(returnList);
+		return returnList.get(0);
+	}
 }

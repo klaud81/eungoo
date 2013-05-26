@@ -3,6 +3,7 @@ package com.eungoo.app.repository;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -98,5 +99,10 @@ public class BabbleRepositoryTest {
 		babbleTrans.setText("test");
 		babbleRepository.add(babbleTrans);
 		assertThat(babbleRepository.list().size(), is(7));
+	}
+
+	@Test
+	public void testRandom() throws Exception {
+		Collections.shuffle(returnList);
 	}
 }

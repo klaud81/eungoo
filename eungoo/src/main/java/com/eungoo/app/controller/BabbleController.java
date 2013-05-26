@@ -30,4 +30,11 @@ public class BabbleController {
 		logger.info("getBabble 요청시간 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
 		model.addAttribute("trans", babbleService.get(babbleTrans.getSeq()));
 	}
+
+	@RequestMapping(value = "/trans")
+	public void getTrans(Model model, @ModelAttribute BabbleTrans babbleTrans) {
+		logger.info("getTrans 요청시간 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
+		model.addAttribute("transInfo", babbleService.getTrans());
+	}
+
 }

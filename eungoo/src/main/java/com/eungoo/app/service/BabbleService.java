@@ -14,4 +14,6 @@ public interface BabbleService {
 	List<BabbleTrans> list();
 
 	void delete(int seq);
+
+	BabbleTrans getTrans();
 }
