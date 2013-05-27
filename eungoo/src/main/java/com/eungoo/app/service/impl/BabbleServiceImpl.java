@@ -47,6 +47,6 @@ public class BabbleServiceImpl implements BabbleService {
 	public BabbleTrans getTrans() {
 		List<BabbleTrans> returnList = babbleRepository.list();
 		Collections.shuffle(returnList);
-		return returnList.get(0);
+		return (returnList.size() == 0) ? new BabbleTrans() : returnList.get(0);
 	}
 }
