@@ -1,7 +1,7 @@
 package com.eungoo.app.repository;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.util.Collections;
 import java.util.Date;
@@ -18,7 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.eungoo.app.domain.BabbleTrans;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/root-context.xml", "file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"})
+@ContextConfiguration(locations = {
+		"file:src/main/webapp/WEB-INF/spring/root-context.xml",
+		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
 @Transactional
 public class BabbleRepositoryTest {
 	@Autowired
@@ -31,28 +33,22 @@ public class BabbleRepositoryTest {
 	@Before
 	public void setUp() throws Exception {
 		babbleTrans = new BabbleTrans();
-		babbleTrans.setRegDate(new Date());
-		babbleTrans.setText("test");
+		babbleTrans.setText("test1");
 		babbleRepository.add(babbleTrans);
 		babbleTrans = new BabbleTrans();
-		babbleTrans.setRegDate(new Date());
-		babbleTrans.setText("test");
+		babbleTrans.setText("test2");
 		babbleRepository.add(babbleTrans);
 		babbleTrans = new BabbleTrans();
-		babbleTrans.setRegDate(new Date());
-		babbleTrans.setText("test");
+		babbleTrans.setText("test3");
 		babbleRepository.add(babbleTrans);
 		babbleTrans = new BabbleTrans();
-		babbleTrans.setRegDate(new Date());
-		babbleTrans.setText("test");
+		babbleTrans.setText("test4");
 		babbleRepository.add(babbleTrans);
 		babbleTrans = new BabbleTrans();
-		babbleTrans.setRegDate(new Date());
-		babbleTrans.setText("test");
+		babbleTrans.setText("test5");
 		babbleRepository.add(babbleTrans);
 		babbleTrans = new BabbleTrans();
-		babbleTrans.setRegDate(new Date());
-		babbleTrans.setText("test");
+		babbleTrans.setText("test6");
 		babbleRepository.add(babbleTrans);
 		babbleTrans = new BabbleTrans();
 
@@ -70,7 +66,8 @@ public class BabbleRepositoryTest {
 
 	@Test
 	public void testGet() throws Exception {
-		assertThat(babbleRepository.get(returnList.get(0).getSeq()).getText(), is("test"));
+		assertThat(babbleRepository.get(returnList.get(0).getSeq()).getText(),
+				is("test1"));
 	}
 
 	@Test
@@ -88,7 +85,8 @@ public class BabbleRepositoryTest {
 		babbleTrans.setRegDate(currentDate);
 		babbleTrans.setText("testUpdate");
 		babbleRepository.update(babbleTrans);
-		BabbleTrans returnTrans = babbleRepository.get(returnList.get(0).getSeq());
+		BabbleTrans returnTrans = babbleRepository.get(returnList.get(0)
+				.getSeq());
 		assertThat(returnTrans.getText(), is("testUpdate"));
 		assertThat(returnTrans.getRegDate(), is(currentDate));
 	}

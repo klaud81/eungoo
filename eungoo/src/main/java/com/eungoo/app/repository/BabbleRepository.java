@@ -4,8 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.classic.Session;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -15,7 +15,7 @@ import com.eungoo.app.domain.BabbleTrans;
 @Repository
 public class BabbleRepository {
 	@Autowired
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
 	private Session getSession() {
 		return sessionFactory.getCurrentSession();
@@ -35,11 +35,13 @@ public class BabbleRepository {
 	}
 
 	public void delete(int seq) {
-		getSession().createQuery("delete from BabbleTrans where seq = ?").setInteger(0, seq).executeUpdate();
+		getSession().createQuery("delete from BabbleTrans where seq = ?")
+				.setInteger(0, seq).executeUpdate();
 	}
 
 	public BabbleTrans get(int seq) {
-		return (BabbleTrans)getCriteria().add(Restrictions.eq("seq", seq)).uniqueResult();
+		return (BabbleTrans) getCriteria().add(Restrictions.eq("seq", seq))
+				.uniqueResult();
 	}
 
 	@SuppressWarnings("unchecked")
