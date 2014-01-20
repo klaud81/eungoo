@@ -8,10 +8,41 @@
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
+	
+		<!-- Spring -->
 		<java-version>1.7</java-version>
 		<org.springframework-version>4.0.0.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<org.hibernate.validator-version>5.0.1.Final</org.hibernate.validator-version>
+		
+		<!-- Logging -->
+		<joda-time-version>2.3</joda-time-version>
+		<log4j-version>1.2.15</log4j-version>
+		
+		<!-- javax -->
+		<javax.inject-version>1</javax.inject-version>
+		<javax.servlet-version>2.5</javax.servlet-version>
+		<javax.servlet.jsp-version>2.2</javax.servlet.jsp-version>
+		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
+		
+		<!-- JSON -->
+		<org.codehaus.jackson-version>1.9.11</org.codehaus.jackson-version>
+		
+		<!-- Hibernate -->
+		<org.hibernate-version>4.3.0.Final</org.hibernate-version>
+		
+		<!-- DB -->		
+		<mysql-version>5.1.27</mysql-version>
+		<org.hsqldb-version>2.2.8</org.hsqldb-version>
+		
+		<!-- TEST -->
+		<junit-version>4.11</junit-version>
+		<org.mockito-version>1.9.5</org.mockito-version>
+		
+		<!-- ETC -->
+		<cglib-version>2.2</cglib-version>
+		
 	</properties>
 	<repositories>
 		<repository>
@@ -24,12 +55,12 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>5.0.1.Final</version>
+			<version>${org.hibernate.validator-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<version>2.3</version>
+			<version>${joda-time-version}</version>
 		</dependency>
 		
 		<!-- Spring -->
@@ -119,7 +150,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
+			<version>${log4j-version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -145,83 +176,70 @@
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
-			<version>1</version>
+			<version>${javax.inject-version}</version>
 		</dependency>
 				
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<version>${javax.servlet-version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
-			<version>2.2</version>
+			<version>${javax.servlet.jsp-version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${javax.servlet.jstl-version}</version>
 		</dependency>
 	
 		<!-- Json -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
-			<version>1.9.11</version>
+			<version>${org.codehaus.jackson-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.11</version>
+			<version>${org.codehaus.jackson-version}</version>
 		</dependency>
 		
 		<!-- DBMS -->
 		<dependency>
-			<groupId>c3p0</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.1.2</version>
-		</dependency>
-		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
-			<version>2.2.8</version>
+			<version>${org.hsqldb-version}</version>
 		</dependency>
-		
-		<!-- Mysql Xonnector -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.27</version>
-		</dependency>
+			<version>${mysql-version}</version>
+		</dependency> 
 		
 		<!-- Hibernate dependecies -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.0.Final</version>
+			<version>${org.hibernate-version}</version>
 		</dependency>
 		
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
-			<version>1.9.5</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.dbunit</groupId>
-			<artifactId>dbunit</artifactId>
-			<version>2.4.8</version>
+			<version>${org.mockito-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -235,7 +253,7 @@
 		<dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
-            <version>2.2</version>
+            <version>${cglib-version}</version>
         </dependency>
 	</dependencies>
     <build>
