@@ -29,12 +29,14 @@
 		<!-- JSON -->
 		<org.codehaus.jackson-version>1.9.11</org.codehaus.jackson-version>
 		
-		<!-- Hibernate -->
+		<!-- JPA + Hibernate -->
 		<org.hibernate-version>4.3.0.Final</org.hibernate-version>
+		<org.springframework.data-version>1.4.3.RELEASE</org.springframework.data-version>
 		
 		<!-- DB -->		
 		<mysql-version>5.1.27</mysql-version>
 		<org.hsqldb-version>2.2.8</org.hsqldb-version>
+		<com.jolbox.bonecp-version>0.8.0.RELEASE</com.jolbox.bonecp-version>
 		
 		<!-- TEST -->
 		<junit-version>4.11</junit-version>
@@ -221,12 +223,27 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-version}</version>
 		</dependency> 
+		<dependency>
+			<groupId>com.jolbox</groupId>
+			<artifactId>bonecp</artifactId>
+			<version>${com.jolbox.bonecp-version}</version>
+		</dependency>
 		
-		<!-- Hibernate dependecies -->
+		<!-- JPA + Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${org.hibernate-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${org.springframework.data-version}</version>
 		</dependency>
 		
 		<!-- Test -->
