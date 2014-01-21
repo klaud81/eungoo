@@ -19,16 +19,6 @@ public class BabbleServiceImpl implements BabbleService {
 	BabbleRepository babbleRepository;
 
 	@Override
-	public void add(BabbleTrans babbleTrans) {
-		babbleRepository.add(babbleTrans);
-	}
-
-	@Override
-	public void update(BabbleTrans babbleTrans) {
-		babbleRepository.update(babbleTrans);
-	}
-
-	@Override
 	public BabbleTrans get(int seq) {
 		return babbleRepository.get(seq);
 	}
@@ -36,11 +26,6 @@ public class BabbleServiceImpl implements BabbleService {
 	@Override
 	public List<BabbleTrans> list() {
 		return babbleRepository.list();
-	}
-
-	@Override
-	public void delete(int seq) {
-		babbleRepository.delete(seq);
 	}
 
 	@Override
