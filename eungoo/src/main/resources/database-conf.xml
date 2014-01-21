@@ -33,7 +33,6 @@
     
     <jdbc:embedded-database id="dataSource" type="HSQL">
 		<jdbc:script location="classpath:sql/HSQL_DDL.sql"/>
-		<jdbc:script location="classpath:sql/SAMPLE_DATA.sql"/>
 	</jdbc:embedded-database> 
 	
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">

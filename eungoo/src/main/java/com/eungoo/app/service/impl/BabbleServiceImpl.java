@@ -16,22 +16,37 @@ import com.eungoo.app.service.BabbleService;
 public class BabbleServiceImpl implements BabbleService {
 
 	@Autowired
-	BabbleRepository babbleRepository;
-
-	@Override
-	public BabbleTrans get(int seq) {
-		return babbleRepository.get(seq);
-	}
-
-	@Override
-	public List<BabbleTrans> list() {
-		return babbleRepository.list();
-	}
+	private BabbleRepository babbleRepository;
 
 	@Override
 	public BabbleTrans getTrans() {
-		List<BabbleTrans> returnList = babbleRepository.list();
+		List<BabbleTrans> returnList = babbleRepository.findAll();
 		Collections.shuffle(returnList);
 		return (returnList.size() == 0) ? new BabbleTrans() : returnList.get(0);
+	}
+
+	@Override
+	public List<BabbleTrans> findAll() {
+		return babbleRepository.findAll();
+	}
+
+	@Override
+	public BabbleTrans create(BabbleTrans babbleTrans) {
+		return babbleRepository.save(babbleTrans);
+	}
+
+	@Override
+	public BabbleTrans update(BabbleTrans babbleTrans) {
+		return babbleRepository.save(babbleTrans);
+	}
+
+	@Override
+	public void delete(int seq) {
+		babbleRepository.delete(seq);
+	}
+
+	@Override
+	public BabbleTrans findOne(int seq) {
+		return babbleRepository.findOne(seq);
 	}
 }

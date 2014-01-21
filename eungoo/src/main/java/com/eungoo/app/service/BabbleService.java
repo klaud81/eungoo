@@ -5,9 +5,15 @@ import java.util.List;
 import com.eungoo.app.domain.BabbleTrans;
 
 public interface BabbleService {
-	BabbleTrans get(int seq);
+	public BabbleTrans getTrans();
 
-	List<BabbleTrans> list();
+	public List<BabbleTrans> findAll();
 
-	BabbleTrans getTrans();
+	public BabbleTrans findOne(int seq);
+
+	public BabbleTrans create(BabbleTrans babbleTrans);
+
+	public BabbleTrans update(BabbleTrans babbleTrans);
+
+	public void delete(int seq);
 }

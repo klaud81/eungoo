@@ -9,20 +9,12 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.eungoo.app.domain.BabbleTrans;
+import com.eungoo.app.util.AbstractRepositoryTest;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {
-		"file:src/main/webapp/WEB-INF/spring/root-context.xml",
-		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
-@Transactional
-public class BabbleRepositoryTest {
+public class BabbleRepositoryTest extends AbstractRepositoryTest {
 	@Autowired
 	BabbleRepository babbleRepository;
 
@@ -34,25 +26,25 @@ public class BabbleRepositoryTest {
 	public void setUp() throws Exception {
 		babbleTrans = new BabbleTrans();
 		babbleTrans.setText("test1");
-		babbleRepository.add(babbleTrans);
+		babbleRepository.save(babbleTrans);
 		babbleTrans = new BabbleTrans();
 		babbleTrans.setText("test2");
-		babbleRepository.add(babbleTrans);
+		babbleRepository.save(babbleTrans);
 		babbleTrans = new BabbleTrans();
 		babbleTrans.setText("test3");
-		babbleRepository.add(babbleTrans);
+		babbleRepository.save(babbleTrans);
 		babbleTrans = new BabbleTrans();
 		babbleTrans.setText("test4");
-		babbleRepository.add(babbleTrans);
+		babbleRepository.save(babbleTrans);
 		babbleTrans = new BabbleTrans();
 		babbleTrans.setText("test5");
-		babbleRepository.add(babbleTrans);
+		babbleRepository.save(babbleTrans);
 		babbleTrans = new BabbleTrans();
 		babbleTrans.setText("test6");
-		babbleRepository.add(babbleTrans);
+		babbleRepository.save(babbleTrans);
 		babbleTrans = new BabbleTrans();
 
-		returnList = babbleRepository.list();
+		returnList = babbleRepository.findAll();
 	}
 
 	@Test
@@ -66,37 +58,22 @@ public class BabbleRepositoryTest {
 
 	@Test
 	public void testGet() throws Exception {
-		assertThat(babbleRepository.get(returnList.get(0).getSeq()).getText(),
-				is("test1"));
+		assertThat(babbleRepository.findOne(1).getText(), is("test1"));
 	}
 
 	@Test
 	public void testDelete() throws Exception {
 		assertThat(returnList.size(), is(6));
 		babbleRepository.delete(returnList.get(0).getSeq());
-		assertThat(babbleRepository.list().size(), is(5));
-	}
-
-	@Test
-	public void testUpdate() throws Exception {
-		babbleRepository.clearSession();
-		Date currentDate = new Date();
-		babbleTrans.setSeq(returnList.get(0).getSeq());
-		babbleTrans.setRegDate(currentDate);
-		babbleTrans.setText("testUpdate");
-		babbleRepository.update(babbleTrans);
-		BabbleTrans returnTrans = babbleRepository.get(returnList.get(0)
-				.getSeq());
-		assertThat(returnTrans.getText(), is("testUpdate"));
-		assertThat(returnTrans.getRegDate(), is(currentDate));
+		assertThat(babbleRepository.findAll().size(), is(5));
 	}
 
 	@Test
 	public void testAdd() throws Exception {
 		babbleTrans.setRegDate(new Date());
 		babbleTrans.setText("test");
-		babbleRepository.add(babbleTrans);
-		assertThat(babbleRepository.list().size(), is(7));
+		babbleRepository.save(babbleTrans);
+		assertThat(babbleRepository.findAll().size(), is(7));
 	}
 
 	@Test

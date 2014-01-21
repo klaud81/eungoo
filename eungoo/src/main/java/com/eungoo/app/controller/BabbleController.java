@@ -17,23 +17,30 @@ public class BabbleController {
 	@Autowired
 	BabbleService babbleService;
 
-	private static final Logger logger = LoggerFactory.getLogger(BabbleController.class);
+	private static final Logger logger = LoggerFactory
+			.getLogger(BabbleController.class);
 
 	@RequestMapping(value = "/list")
 	public void babbleList(Model model) {
-		logger.info("babbleList 요청시간 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
-		model.addAttribute("transList", babbleService.list());
+		logger.info("babbleList 요청시간 : "
+				+ new java.text.SimpleDateFormat("yyyyMMdd")
+						.format(new java.util.Date()));
+		model.addAttribute("transList", babbleService.findAll());
 	}
 
 	@RequestMapping(value = "/get")
 	public void getBabble(Model model, @ModelAttribute BabbleTrans babbleTrans) {
-		logger.info("getBabble 요청시간 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
-		model.addAttribute("trans", babbleService.get(babbleTrans.getSeq()));
+		logger.info("getBabble 요청시간 : "
+				+ new java.text.SimpleDateFormat("yyyyMMdd")
+						.format(new java.util.Date()));
+		model.addAttribute("trans", babbleService.findOne(babbleTrans.getSeq()));
 	}
 
 	@RequestMapping(value = "/trans")
 	public void getTrans(Model model, @ModelAttribute BabbleTrans babbleTrans) {
-		logger.info("getTrans 요청시간 : " + new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
+		logger.info("getTrans 요청시간 : "
+				+ new java.text.SimpleDateFormat("yyyyMMdd")
+						.format(new java.util.Date()));
 		model.addAttribute("transInfo", babbleService.getTrans());
 	}
 
