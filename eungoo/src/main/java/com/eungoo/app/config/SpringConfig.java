@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@ImportResource({ "classpath*:/repository-context.xml" })
+@ImportResource({ "classpath*:/database-context.xml" })
 public class SpringConfig {
 
 	@Bean

@@ -8,7 +8,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 @Configuration
-@ImportResource({ "classpath:repository-context.xml" })
+@ImportResource({ "classpath:database-context.xml" })
 public class AbstractRepositoryTestApplicationContextConfig {
 	@Autowired
 	private ConfigurableEnvironment configurableEnvironment;
