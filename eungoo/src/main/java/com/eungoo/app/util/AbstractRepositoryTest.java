@@ -6,9 +6,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.eungoo.app.config.DatabaseConfig;
+import com.eungoo.app.config.SpringConfig;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
-@ContextConfiguration(classes = AbstractRepositoryTestApplicationContextConfig.class)
+@ContextConfiguration(classes = { DatabaseConfig.class, SpringConfig.class })
 @TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 public abstract class AbstractRepositoryTest {
 

@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
@@ -23,7 +24,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.eungoo.app.controller")
+@ComponentScan(basePackages = "com.eungoo.app.controller", includeFilters = { @ComponentScan.Filter(Controller.class) })
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
