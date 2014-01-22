@@ -40,7 +40,6 @@
 		<property name="password" value="rndmswjd12"/>
 	-->
  
-    <!-- BoneCP configuration -->
     <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
         <property name="driverClass" value="org.hsqldb.jdbc.JDBCDriver" />
         <property name="jdbcUrl" value="jdbc:hsqldb:mem:linkdb" />
