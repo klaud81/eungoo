@@ -27,22 +27,30 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
-	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+	public void configureDefaultServletHandling(
+			DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+		registry.addResourceHandler("/resources/**").addResourceLocations(
+				"/resources/");
 	}
 
 	@Override
-	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-		configurer.favorPathExtension(true).useJaf(false).ignoreAcceptHeader(true).mediaType("html", MediaType.TEXT_HTML).mediaType("json", MediaType.APPLICATION_JSON).defaultContentType(MediaType.TEXT_HTML);
+	public void configureContentNegotiation(
+			ContentNegotiationConfigurer configurer) {
+		configurer.favorPathExtension(true).useJaf(false)
+				.ignoreAcceptHeader(true)
+				.mediaType("html", MediaType.TEXT_HTML)
+				.mediaType("json", MediaType.APPLICATION_JSON)
+				.defaultContentType(MediaType.TEXT_HTML);
 	}
 
 	@Bean
-	public ViewResolver contentNegotiatingViewResolver(ContentNegotiationManager manager) {
+	public ViewResolver contentNegotiatingViewResolver(
+			ContentNegotiationManager manager) {
 		List<ViewResolver> resolvers = new ArrayList<ViewResolver>();
 
 		InternalResourceViewResolver jspResolver = new InternalResourceViewResolver();
@@ -61,7 +69,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	}
 
 	public class JsonViewResolver implements ViewResolver {
-		public View resolveViewName(String viewName, Locale locale) throws Exception {
+		public View resolveViewName(String viewName, Locale locale)
+				throws Exception {
 			MappingJackson2JsonView view = new MappingJackson2JsonView();
 			view.setPrettyPrint(true);
 			return view;

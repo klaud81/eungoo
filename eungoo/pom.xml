@@ -27,7 +27,7 @@
 		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
 		
 		<!-- JSON -->
-		<org.codehaus.jackson-version>1.9.11</org.codehaus.jackson-version>
+		<com.fasterxml.jackson.core-version>2.3.0</com.fasterxml.jackson.core-version>
 		
 		<!-- JPA + Hibernate -->
 		<org.hibernate-version>4.3.0.Final</org.hibernate-version>
@@ -202,15 +202,20 @@
 	
 		<!-- Json -->
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-core-asl</artifactId>
-			<version>${org.codehaus.jackson-version}</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson.core-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${org.codehaus.jackson-version}</version>
-		</dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${com.fasterxml.jackson.core-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.core-version}</version>
+        </dependency>
 		
 		<!-- DBMS -->
 		<dependency>
