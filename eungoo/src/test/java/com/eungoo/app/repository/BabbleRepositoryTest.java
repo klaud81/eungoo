@@ -58,7 +58,8 @@ public class BabbleRepositoryTest extends AbstractRepositoryTest {
 
 	@Test
 	public void testGet() throws Exception {
-		assertThat(babbleRepository.findOne(1).getText(), is("test1"));
+		assertThat(babbleRepository.findOne(returnList.get(0).getSeq())
+				.getText(), is("test1"));
 	}
 
 	@Test
