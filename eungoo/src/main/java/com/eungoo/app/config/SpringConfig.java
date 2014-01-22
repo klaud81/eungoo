@@ -14,9 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 @Configuration
-@ComponentScan(basePackages = "com.eungoo.app", excludeFilters = {
-		@ComponentScan.Filter(Controller.class),
-		@ComponentScan.Filter(Configuration.class) })
+@ComponentScan(basePackages = "com.eungoo.app", excludeFilters = @ComponentScan.Filter(Controller.class))
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.eungoo.app.repository")
 public class SpringConfig implements TransactionManagementConfigurer {

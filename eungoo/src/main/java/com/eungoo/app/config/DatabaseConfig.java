@@ -52,8 +52,6 @@ public class DatabaseConfig {
 		vendorAdapter.setGenerateDdl(true);
 
 		Map<String, Object> jpaPropertyMap = vendorAdapter.getJpaPropertyMap();
-		jpaPropertyMap.put("jadira.usertype.autoRegisterUserTypes", "true");
-		jpaPropertyMap.put("jadira.usertype.databaseZone", "jvm");
 		jpaPropertyMap.put("javax.persistence.sharedCache.mode", "ALL");
 		jpaPropertyMap.put("hibernate.show_sql", "true");
 		jpaPropertyMap.put("hibernate.format_sql", "true");
