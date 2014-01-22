@@ -23,7 +23,7 @@
 		
 		<!-- javax -->
 		<javax.inject-version>1</javax.inject-version>
-		<javax.servlet-version>2.5</javax.servlet-version>
+		<javax.servlet-version>3.0.1</javax.servlet-version>
 		<javax.servlet.jsp-version>2.2</javax.servlet.jsp-version>
 		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
 		
@@ -149,7 +149,7 @@
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
+			<artifactId>javax.servlet-api</artifactId>
 			<version>${javax.servlet-version}</version>
 			<scope>provided</scope>
 		</dependency>
