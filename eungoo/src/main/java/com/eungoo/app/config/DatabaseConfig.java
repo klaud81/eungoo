@@ -66,7 +66,7 @@ public class DatabaseConfig {
 
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setJpaVendorAdapter(vendorAdapter);
-		factory.setPackagesToScan("com.eungoo.app");
+		factory.setPackagesToScan("com.eungoo.app.domain");
 		factory.setDataSource(dataSource());
 		factory.setJpaPropertyMap(jpaPropertyMap);
 

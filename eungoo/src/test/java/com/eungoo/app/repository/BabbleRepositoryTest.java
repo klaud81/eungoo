@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.eungoo.app.domain.BabbleTrans;
+import com.eungoo.app.domain.BabbleTransPredicates;
 import com.eungoo.app.util.AbstractRepositoryTest;
 
 public class BabbleRepositoryTest extends AbstractRepositoryTest {
@@ -80,5 +81,13 @@ public class BabbleRepositoryTest extends AbstractRepositoryTest {
 	@Test
 	public void testRandom() throws Exception {
 		Collections.shuffle(returnList);
+	}
+
+	@Test
+	public void testSearchText() throws Exception {
+		List<BabbleTrans> testList = (List<BabbleTrans>) babbleRepository
+				.findAll(BabbleTransPredicates.textLike("test3"));
+
+		assertThat(testList.size(), is(1));
 	}
 }

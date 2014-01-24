@@ -24,11 +24,11 @@ public class BabbleTrans {
 	private Date regDate;
 
 	public Date getRegDate() {
-		return regDate == null ? null : (Date)regDate.clone();
+		return regDate == null ? null : (Date) regDate.clone();
 	}
 
 	public void setRegDate(Date regDate) {
-		this.regDate = (regDate == null) ? null : (Date)regDate.clone();
+		this.regDate = (regDate == null) ? null : (Date) regDate.clone();
 	}
 
 	public int getSeq() {

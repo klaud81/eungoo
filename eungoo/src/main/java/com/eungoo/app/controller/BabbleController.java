@@ -36,6 +36,15 @@ public class BabbleController {
 		model.addAttribute("trans", babbleService.findOne(babbleTrans.getSeq()));
 	}
 
+	@RequestMapping(value = "/search")
+	public void getSearch(Model model, @ModelAttribute BabbleTrans babbleTrans) {
+		logger.info("search 요청시간 : "
+				+ new java.text.SimpleDateFormat("yyyyMMdd")
+						.format(new java.util.Date()));
+		model.addAttribute("searchList",
+				babbleService.searchTrans(babbleTrans.getText()));
+	}
+
 	@RequestMapping(value = "/trans")
 	public void getTrans(Model model, @ModelAttribute BabbleTrans babbleTrans) {
 		logger.info("getTrans 요청시간 : "
