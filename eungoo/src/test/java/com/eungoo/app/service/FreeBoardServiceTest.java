@@ -36,12 +36,4 @@ public class FreeBoardServiceTest extends AbstractRepositoryTest {
 		freeBoardService.findAll();
 		assertThat(freeBoardService.findAll().size(), is(size + 1));
 	}
-
-	@Test
-	public void testSave2() throws Exception {
-		int size = freeBoardService.findAll().size();
-		freeBoardService.save(freeBoard);
-		freeBoardService.findAll();
-		assertThat(freeBoardService.findAll().size(), is(size + 1));
-	}
 }
