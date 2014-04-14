@@ -6,4 +6,4 @@ public class BabbleTransPredicates {
 	public static BooleanExpression textLike(final String searchTerm) {
 		return QBabbleTrans.babbleTrans.text.contains(searchTerm);
 	}
-}
+} 
