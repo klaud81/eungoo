@@ -28,8 +28,7 @@ public class BabbleService {
 	}
 
 	public List<BabbleTrans> searchTrans(String searchText) {
-		return (List<BabbleTrans>) babbleRepository
-				.findAll(BabbleTransPredicates.textLike(searchText));
+		return (List<BabbleTrans>)babbleRepository.findAll(BabbleTransPredicates.textLike(searchText));
 	}
 
 	public BabbleTrans create(BabbleTrans babbleTrans) {

@@ -17,17 +17,18 @@ public class FreeBoardService {
 	private FreeBoardRepository freeBoardRepository;
 
 	public FreeBoard save(FreeBoard freeBoard) {
+		freeBoard.setInsertDate(new Date());
+		freeBoard.setInsertUser("eungoo");
+		return freeBoardRepository.save(freeBoard);
+	}
+
+	public FreeBoard modify(FreeBoard freeBoard) {
+		freeBoard.setUpdateDate(new Date());
+		freeBoard.setUpdateUser("eungoo");
 		return freeBoardRepository.save(freeBoard);
 	}
 
 	public List<FreeBoard> findAll() {
-		FreeBoard freeBoard = new FreeBoard();
-		freeBoard.setContent("Content Test");
-		freeBoard.setInsertDate(new Date());
-		freeBoard.setInsertUser("eungoo");
-		freeBoard.setUpdateDate(new Date());
-		freeBoard.setUpdateUser("eungoo");
-		freeBoard.setTitle("제목 테스트");
 		return freeBoardRepository.findAll();
 	}
 }
