@@ -3,8 +3,6 @@ package com.eungoo.app.service;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-import java.util.Date;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +21,6 @@ public class FreeBoardServiceTest extends AbstractRepositoryTest {
 		freeBoard = new FreeBoard();
 		freeBoard.setTitle("제목");
 		freeBoard.setContent("내용");
-		freeBoard.setInsertDate(new Date());
-		freeBoard.setInsertUser("eungoo");
-		freeBoard.setUpdateDate(new Date());
-		freeBoard.setUpdateUser("eungoo");
 	}
 
 	@Test

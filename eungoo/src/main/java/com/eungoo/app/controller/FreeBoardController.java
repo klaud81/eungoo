@@ -1,7 +1,5 @@
 package com.eungoo.app.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,15 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.eungoo.app.service.FreeBoardService;
 
 @Controller
-public class FreeBoardController {
-	private static final Logger logger = LoggerFactory.getLogger(FreeBoardController.class);
-
+@RequestMapping(value = "/board")
+public class FreeBoardController extends JpaController {
 	@Autowired
-	FreeBoardService freeBoardService;
+	FreeBoardService service;
 
-	@RequestMapping(value = "/freeboard")
-	public String test(Model model) {
-		model.addAttribute("list", freeBoardService.findAll());
+	@RequestMapping(value = "/list")
+	public String list(Model model) {
+		model.addAttribute("list", service.findAll());
 		return "freeboard";
+	}
+
+	@RequestMapping(value = "/list")
+	public String findAll(Model model) {
 	}
 }
