@@ -135,7 +135,7 @@ a:active {
   background: black; }
 
 #work {
-  background: black; }
+  background: #2980B9; }
 
 #networks {
   background: #474e5d; }
@@ -170,7 +170,9 @@ a:active {
   display: table-row; }
 
 .showcase-info {
-  text-align: center; }
+  text-align: center; 
+  vertical-align:middle;
+}
 
 /* =========================
 

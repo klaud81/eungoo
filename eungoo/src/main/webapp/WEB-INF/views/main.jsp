@@ -41,7 +41,7 @@
 				</ul>
 			</div>
 			<div class="showcase-info">
-				<h2 class="mb-7">Coming Soon..</h2>
+				<h3 class="mb-7"><br/>FlowDabbler Area Coming Soon..</h3>
 			</div>
 		</div>
 	</section>
@@ -49,7 +49,7 @@
 	<section id="networks">
 		<div class="container">
 			<p>
-				<a href="https://www.facebook.com/flowdabbler"><i class="facebook fa fa-facebook"></i></a><a href="mailto:akasilvernine@gmail.com"><i class="mail fa fa-envelope"></i></a>
+				<a href="https://www.facebook.com/flowdabbler"><i class="facebook fa fa-facebook"></i></a><a href="mailto:akasilvernine@gmail.com"><i class="mail fa fa-envelope"></i></a> 
 			</p>
 		</div>
 	</section>
