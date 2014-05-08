@@ -1,68 +1,66 @@
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
     <title>FlowDabbler</title>
-    <meta name="description" content="FlowDabbler"/>
 
-    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Bootstrap core CSS -->
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Loading Bootstrap -->
-    <link href="/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Loading Flat UI -->
-    <link href="/resources/css/flowdabbler-ui.css" rel="stylesheet">
-    <link href="/resources/css/demo.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="/resources/images/favicon.ico">
+    <!-- Custom styles for this template -->
+    <link href="/resources/css/cover.css" rel="stylesheet">
   </head>
+
   <body>
-    <div class="container">
 
-		<div class="login">
-	        <div class="login-screen">
-	          <div class="login-icon">
-	            <img src="/resources/images/icons/svg/paper-bag.svg" alt="Welcome to FlowDabbler Area" />
-	            <h4>Welcome to <small>FlowDabbler</small></h4>
-	          </div>
-	
-	          <div class="login-form">
-	            <div class="form-group">
-	              <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" />
-	              <label class="login-field-icon fui-user" for="login-name"></label>
-	            </div>
-	
-	            <div class="form-group">
-	              <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
-	              <label class="login-field-icon fui-lock" for="login-pass"></label>
-	            </div>
-	
-	            <a class="btn btn-primary btn-lg btn-block" href="javascript:login()">Log in</a>
-	            <a class="login-link">Lost your password?</a>
-	          </div>
-	        </div>
-	      </div>
+    <div class="site-wrapper">
 
-    </div> <!-- /container -->
+      <div class="site-wrapper-inner">
 
-    <!-- Load JS here for greater good =============================-->
-    <script src="/resources/js/jquery-1.8.3.min.js"></script>
-    <script src="/resources/js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="/resources/js/jquery.ui.touch-punch.min.js"></script>
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">FlowDabbler</h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">FlowDabbler</h1>
+            <p class="lead">Welcome to FlowDabbler Area</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Enter</a>
+            </p> 
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>FlowDabbler.com by <a href="http://eungoo.com">SilverNine</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/resources/js/bootstrap.min.js"></script>
-    <script src="/resources/js/bootstrap-select.js"></script>
-    <script src="/resources/js/bootstrap-switch.js"></script>
-    <script src="/resources/js/flatui-checkbox.js"></script>
-    <script src="/resources/js/flatui-radio.js"></script>
-    <script src="/resources/js/jquery.tagsinput.js"></script>
-    <script src="/resources/js/jquery.placeholder.js"></script>
-    <script src="/resources/js/jquery.stacktable.js"></script>
-    <script src="/resources/http://vjs.zencdn.net/4.3/video.js"></script>
-    <script src="/resources/js/application.js"></script>
-    <script type="text/javascript">
-    	function login() {
-    		alert("Login Test");
-    	}
-    </script>
   </body>
 </html>
