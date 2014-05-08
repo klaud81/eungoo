@@ -1,103 +1,114 @@
-// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
-// IT'S ALL JUST JUNK FOR OUR DOCS!
-// ++++++++++++++++++++++++++++++++++++++++++
+// Some general UI pack related JS
+// Extend JS String with repeat method
+String.prototype.repeat = function(num) {
+  return new Array(num + 1).join(this);
+};
 
-/*!
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Creative Commons Attribution 3.0 Unported License. For
- * details, see http://creativecommons.org/licenses/by/3.0/.
- */
+(function($) {
 
+  // Add segments to a slider
+  $.fn.addSliderSegments = function (amount, orientation) {    
+    return this.each(function () {
+      if (orientation == "vertical") {
+        var output = ''
+          , i;
+        for (i = 1; i <= amount - 2; i++) {
+          output += '<div class="ui-slider-segment" style="top:' + 100 / (amount - 1) * i + '%;"></div>';
+        };
+        $(this).prepend(output);
+      } else {
+        var segmentGap = 100 / (amount - 1) + "%"
+          , segment = '<div class="ui-slider-segment" style="margin-left: ' + segmentGap + ';"></div>';
+        $(this).prepend(segment.repeat(amount - 2));
+      }
+    });
+  };
 
-!function ($) {
+  $(function() {
+  
+    // Todo list
+    $(".todo").on('click', 'li', function() {
+      $(this).toggleClass("todo-done");
+    });
 
-  $(function(){
+    // Custom Selects
+    $("select[name='huge']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+    $("select[name='herolist']").selectpicker({style: 'btn-primary', menuStyle: 'dropdown-inverse'});
+    $("select[name='info']").selectpicker({style: 'btn-info'});
 
-    // IE10 viewport hack for Surface/desktop Windows 8 bug
-    //
-    // See Getting Started docs for more information
-    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-      var msViewportStyle = document.createElement("style");
-      msViewportStyle.appendChild(
-        document.createTextNode(
-          "@-ms-viewport{width:auto!important}"
-        )
-      );
-      document.getElementsByTagName("head")[0].
-        appendChild(msViewportStyle);
+    // Tooltips
+    $("[data-toggle=tooltip]").tooltip("show");
+
+    // Tags Input
+    $(".tagsinput").tagsInput();
+
+    // jQuery UI Sliders
+    var $slider = $("#slider");
+    if ($slider.length) {
+      $slider.slider({
+        min: 1,
+        max: 5,
+        value: 2,
+        orientation: "horizontal",
+        range: "min"
+      }).addSliderSegments($slider.slider("option").max);
     }
 
+    var $verticalSlider = $("#vertical-slider");
+    if ($verticalSlider.length) {
+      $verticalSlider.slider({
+        min: 1,
+        max: 5,
+        value: 3,
+        orientation: "vertical",
+        range: "min"
+      }).addSliderSegments($verticalSlider.slider("option").max, "vertical");
+    }
 
-    var $window = $(window)
-    var $body   = $(document.body)
+    // Placeholders for input/textarea
+    $(":text, textarea").placeholder();
 
-    var navHeight = $('.navbar').outerHeight(true) + 10
+    // Focus state for append/prepend inputs
+    $('.input-group').on('focus', '.form-control', function () {
+      $(this).closest('.input-group, .form-group').addClass('focus');
+    }).on('blur', '.form-control', function () {
+      $(this).closest('.input-group, .form-group').removeClass('focus');
+    });
 
-    $body.scrollspy({
-      target: '.bs-sidebar',
-      offset: navHeight
-    })
+    // Make pagination demo work
+    $(".pagination").on('click', "a", function() {
+      $(this).parent().siblings("li").removeClass("active").end().addClass("active");
+    });
 
-    $window.on('load', function () {
-      $body.scrollspy('refresh')
-    })
+    $(".btn-group").on('click', "a", function() {
+      $(this).siblings().removeClass("active").end().addClass("active");
+    });
 
-    $('.bs-docs-container [href=#]').click(function (e) {
-      e.preventDefault()
-    })
+    // Disable link clicks to prevent page scrolling
+    $(document).on('click', 'a[href="#fakelink"]', function (e) {
+      e.preventDefault();
+    });
 
-    // back to top
-    setTimeout(function () {
-      var $sideBar = $('.bs-sidebar')
+    // Switch
+    $("[data-toggle='switch']").wrap('<div class="switch" />').parent().bootstrapSwitch();
 
-      $sideBar.affix({
-        offset: {
-          top: function () {
-            var offsetTop      = $sideBar.offset().top
-            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
-            var navOuterHeight = $('.bs-docs-nav').height()
+        // Typeahead
+    if($('#typeahead-demo-01').length) {
+      $('#typeahead-demo-01').typeahead({
+        name: 'states',
+        limit: 4,
+        local: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+        "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky",
+        "Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri",
+        "Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota",
+        "North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+        "South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+      });
+    }  
 
-            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-          }
-        , bottom: function () {
-            return (this.bottom = $('.bs-footer').outerHeight(true))
-          }
-        }
-      })
-    }, 100)
-
-    setTimeout(function () {
-      $('.bs-top').affix()
-    }, 100)
-
-    // tooltip demo
-    $('.tooltip-demo').tooltip({
-      selector: "[data-toggle=tooltip]",
-      container: "body"
-    })
-
-    $('.tooltip-test').tooltip()
-    $('.popover-test').popover()
-
-    $('.bs-docs-navbar').tooltip({
-      selector: "a[data-toggle=tooltip]",
-      container: ".bs-docs-navbar .nav"
-    })
-
-    // popover demo
-    $("[data-toggle=popover]")
-      .popover()
-
-    // button state demo
-    $('#fat-btn')
-      .click(function () {
-        var btn = $(this)
-        btn.button('loading')
-        setTimeout(function () {
-          btn.button('reset')
-        }, 3000)
-      })
-})
-
-}(jQuery)
+    // make code pretty
+    window.prettyPrint && prettyPrint();
+    
+  });
+  
+})(jQuery);
