@@ -15,41 +15,42 @@ $(document).ready(function () {
     */
 	
 	var t = [];
-	t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+	t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-    t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-        t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-        t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-        t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-        t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-        t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
-        t.push('<li><a href="' + "http://eungoo.com" + '">');
-    t.push('<img src="' + "https://d13yacurqjgara.cloudfront.net/users/5411/screenshots/1533157/photo_1-05-2014_4_54_21_pm.jpg" + '" ');
-    t.push('alt="' + "test" + '"><span class="d-hover">' + "TESTTEST" + "<p>test해봅시다 으하하</p></span></a></li>")
+    t.push('<li><a href="' + "#work" + '">');
+    t.push('<img src="' + "http://eungoo.com/app/resources/assets/img/comingsoon.png" + '" ');
+    t.push('alt="' + "test" + '"><span class="d-hover">' + "Wait.." + "<p>Coming Soon..</p></span></a></li>")
     
     
     $(".slides").html(t.join(""))
 });
+
 $(function () {
     $(".service").hover(function () {
         $("#networks").addClass($(this).data("network")).addClass("active");
@@ -59,6 +60,7 @@ $(function () {
         $("#networks p").html("You can find me all over the web")
     })
 });
+
 jQuery(document).ready(function () {
     $("#hero").height($(window).height());
     $(window).resize(function () {
@@ -76,6 +78,7 @@ jQuery(document).ready(function () {
         $("#networks").css("min-height", "600px")
     })
 });
+
 jQuery(document).ready(function (e) {
     e(".scroll").click(function (t) {
         t.preventDefault();

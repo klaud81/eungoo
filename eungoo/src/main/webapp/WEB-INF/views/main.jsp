@@ -41,8 +41,7 @@
 				</ul>
 			</div>
 			<div class="showcase-info">
-				<h2 class="mb-7"></h2>
-				<a href="#networks" class="scroll"><span class="down-arrow"></span></a>
+				<h2 class="mb-7">Coming Soon..</h2>
 			</div>
 		</div>
 	</section>
