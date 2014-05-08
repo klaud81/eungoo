@@ -48,7 +48,7 @@
 				</ul>
 			</div>
 			<div class="showcase-info">
-				<h2 class="mb-7">Follow me on Dribbble!</h2>
+				<h2 class="mb-7"></h2>
 			</div>
 		</div>
 	</section>
@@ -57,7 +57,7 @@
 	<section id="networks">
 		<div class="container">
 			<p>
-				<a href="#"><i class="dribbble fa fa-dribbble"></i></a><a href="#"><i class="facebook fa fa-facebook"></i></a><a href="#"><i class="twitter fa fa-twitter"></i></a><a href="#"><i class="mail fa fa-envelope"></i></a>
+				<a href="https://www.facebook.com/flowdabbler"><i class="facebook fa fa-facebook"></i></a><a href="mailto:akasilvernine@gmail.com"><i class="mail fa fa-envelope"></i></a>
 			</p>
 
 		</div>
