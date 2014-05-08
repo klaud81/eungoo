@@ -18,7 +18,6 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.eungoo.app.repository")
 public class SpringConfig implements TransactionManagementConfigurer {
-
 	@Autowired
 	EntityManagerFactory entityManagerFactory;
 
