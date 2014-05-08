@@ -11,15 +11,12 @@ import com.eungoo.app.service.FreeBoardService;
 @RequestMapping(value = "/board")
 public class FreeBoardController extends JpaController {
 	@Autowired
-	FreeBoardService service;
+	FreeBoardService freeBoardService;
 
 	@RequestMapping(value = "/list")
 	public String list(Model model) {
-		model.addAttribute("list", service.findAll());
+		model.addAttribute("list", freeBoardService.findAll());
 		return "freeboard";
 	}
 
-	@RequestMapping(value = "/list")
-	public String findAll(Model model) {
-	}
 }
