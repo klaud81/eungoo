@@ -60,8 +60,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/resources/js/bootstrap.min.js"></script>
-    <script src="/resources/assets/js/jribbble.js"></script>
-    <script src="/resources/assets/js/site-ck.js"></script>
+    <!-- 
+	    <script src="/resources/assets/js/jribbble.js"></script>
+	    <script src="/resources/assets/js/site-ck.js"></script> 
+    -->
+    <script src="/resources/assets/js/work.js"></script>
 
   </body>
 </html>
