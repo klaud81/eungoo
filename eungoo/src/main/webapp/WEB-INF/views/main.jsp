@@ -432,7 +432,7 @@
 					<p><span class="icon icon-home"></span> 40, Gangnam-ro, Giheung-gu, Yongin-si, Gyeonggi-do, Korea<br/>
 						<span class="icon icon-mobile"></span> 010 0000 0000 <br/>
 						<span class="icon icon-envelop"></span> <a href="#"> akasilvernine@gmail.com</a> <br/>
-						<span class="icon icon-twitter"></span> <a href="https://twitter.com/FlowDabblerArea"> @FlowDabblerArea </a> <br/>
+						<span class="icon icon-twitter"></span> <a href="https://twitter.com/FlowDabbler"> @FlowDabbler </a> <br/>
 						<span class="icon icon-facebook"></span> <a href="https://www.facebook.com/flowdabbler"> FlowDabbler </a> <br/>
 					</p>
 				</div><!-- col -->
