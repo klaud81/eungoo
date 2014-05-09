@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FlowDabbler Area">
     <meta name="author" content="SilverNine">
-    <link rel="shortcut icon" href="/resources/ico/favicon.png">
+    <link rel="shortcut icon" href="/resources/img/favicon.png">
 
     <title> FlowDabbler Area </title>
 
@@ -33,13 +33,18 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+            <!-- <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span> -->
+            <img src="/resources/img/icon3032.png"/>
           </button>
-          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
+          <!-- 
+	          <a class="navbar-brand hidden-xs hidden-sm" href="#headerwrap">
+	          	<span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span>
+	          </a>
+          -->
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#home" class="smoothScroll">Home</a></li>
+            <li><a href="#headerwrap" class="smoothScroll">Home</a></li> 
 			<li> <a href="#about" class="smoothScroll"> About</a></li>
 			<li> <a href="#services" class="smoothScroll"> Services</a></li>
 			<li> <a href="#team" class="smoothScroll"> Team</a></li>
@@ -57,7 +62,7 @@
 	    <div id="headerwrap" id="home" name="home">
 			<header class="clearfix">
 	  		 		<h1><img src="/resources/img/flowdabbler_header_logo.png" width="200"/></h1>
-	  		 		<p>Welcome to FlowDabbler Area.</p>
+	  		 		<!-- <p><h4 style="color:white"><b>Welcome to FlowDabbler Area.</b></h4></p> -->
 	  		</header>	    
 	    </div><!-- /headerwrap --> 
 
@@ -459,7 +464,7 @@
 				</div><!-- col -->
 				
 				<div class="col-lg-4">
-					<h3>Support Us</h3>
+					<h3>Join Us</h3>
 					<p>Welcome to FlowDabbler Area<br/>Please Join Us</p>
 				</div><!-- col -->
 
