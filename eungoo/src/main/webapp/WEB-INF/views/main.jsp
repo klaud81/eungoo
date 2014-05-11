@@ -36,11 +36,11 @@
             <!-- <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span> -->
             <img src="/resources/img/icon3032.png"/>
           </button>
-          <!-- 
+          
 	          <a class="navbar-brand hidden-xs hidden-sm" href="#headerwrap">
-	          	<span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span>
+	          	<span class="icon" style="font-size:18px; color:#3498db;"><img src="/resources/img/icon1819.png" style="background:none;"/></span>
 	          </a>
-          -->
+          
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
