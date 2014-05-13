@@ -50,8 +50,6 @@
       </div>
     </div>
     </div>
-
-  
   
 		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" id="home" name="home">
