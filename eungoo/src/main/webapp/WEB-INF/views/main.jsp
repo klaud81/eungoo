@@ -58,12 +58,18 @@
 			<header class="clearfix">
 	  		 		<h1><img src="/resources/img/flowdabbler_header_logo.png" width="300" style="padding-top:60px"/></h1> 
 	  		 		<p>
-	  		 			<h4 style="color:white" class="fng">
-
-						</h4>
-					</p>
+	  		 			<h5 style="color:#BBBBBB" class="fng">
+	  		 				<span style="line-height:180%"> 
+								FlowDabbler 브랜드는<br/>
+		  		 				2014년 한국의 언더그라운드 팀에 의해 시작되었습니다.<br/>
+		  		 				그들의 확고한 신념을 담은 브랜드 아이덴티티를 지킴과<br/>
+		  		 				동시에 트렌디한 룩을 적절하게 믹스한 디자인을 발매하며<br/>
+		  		 				전세계 많은 스트릿 피플들에게 다가가고 있습니다.<br/>
+	  		 				</span> 
+						</h5> 
+					</p> 
 	  		</header>	    
-	    </div><!-- /headerwrap -->  
+	    </div><!-- /headerwrap -->   
 
 		<!-- ==== SECTION DIVIDER6 ==== -->
 		<section class="section-divider textdivider divider6">
