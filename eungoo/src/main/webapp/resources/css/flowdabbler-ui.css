@@ -641,5 +641,7 @@ SilverNine Custom
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
  
 .fng{
-		font-family:'³ª´®°íµñ', NanumGothic, 'Nanum Gothic';
+		font-family:'ë‚˜ëˆ”ê³ ë”•', NanumGothic, 'Nanum Gothic';
+		-webkit-font-smoothing: antialiased;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
